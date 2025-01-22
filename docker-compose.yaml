@@ -1,0 +1,13 @@
+name: nifi
+
+services:
+  nifi:
+    image: apache/nifi:latest
+    container_name: nifi
+    environment:
+      SINGLE_USER_CREDENTIALS_USERNAME: admin
+      SINGLE_USER_CREDENTIALS_PASSWORD: ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB
+    ports:
+      - "8443:8443"
+    volumes:
+      - ./nifi_files:/data/nifi_files
